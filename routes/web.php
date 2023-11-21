@@ -10,5 +10,5 @@ Route::get("/", function(){
 Route::get('/test', [TestController::class, "test"]);
 
 Route::get('/{id}', function (int $id) {
-    return "<h1>" . $id . "</h1>";
+    return $id;
 });
