@@ -6,12 +6,8 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function test()
-    { {
-            $nom = "Ababsa";
-            $prenom = "Rabii";
-            $age = 19;
-            return view('test', ["data" => [$nom, $prenom, $age]]);
-        }
+    public function test($id, $name, $age)
+    {
+        return view('test', compact('id', 'name', 'age'));
     }
 }

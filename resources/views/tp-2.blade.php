@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>TP 2</h2>
+    <h1>TP 2</h1>
+    <h2>Accesible routes:</h2>
+    <ul>
+        <li>/create</li>
+        <li>/show</li>
+        <li>/edit</li>
+    </ul>
 </body>
 </html>

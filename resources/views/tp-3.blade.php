@@ -14,17 +14,17 @@
         @csrf
         <div>
             <label for="nom">Nom</label>
-            <input type="text" name="name" id="nom">
+            <input type="text" name="name" id="nom" required>
         </div>
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
         </div>
-        <button>INSCRIT</button>
+        <button>S'inscrire</button>
     </form>
 </body>
 

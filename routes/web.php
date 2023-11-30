@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Tp1Controller;
 use App\Http\Controllers\Tp2Controller;
@@ -11,12 +12,6 @@ Route::get("/", function () {
 Route::get('/tp-1', [Tp1Controller::class, "get"]);
 Route::post('/tp-1', [Tp1Controller::class, "post"]);
 
-Route::get('/test', [TestController::class, "test"]);
-
-Route::get('/test/{id}/{name}/{age}', function (Request $request, string $id, string $name, int $age) {
-    echo "ID: $id<br>";
-    echo "Name: $name<br>";
-    echo "Age: $age<br>";
-});
+Route::get('/test/{id}/{name}/{age}', [TestController::class, "test"]);
 
 Route::resource("/tp-2", Tp2Controller::class);
