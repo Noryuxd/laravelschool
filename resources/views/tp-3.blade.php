@@ -10,11 +10,19 @@
 
 <body>
     <h2>Inscription</h2>
-    <form action="{{ route('tp-2.store') }}" method="POST">
+    <form action="/tp-3" method="POST">
         @csrf
         <div>
             <label for="nom">Nom</label>
-            <input type="text" name="name" id="nom" required>
+            <input type="text" name="nom" id="nom" required>
+        </div>
+        <div>
+            <label for="prenom">Prenom</label>
+            <input type="text" name="prenom" id="prenom" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" required>
         </div>
         <div>
             <label for="email">Email</label>

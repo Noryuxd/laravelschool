@@ -21,7 +21,7 @@ class Tp2Controller extends Controller
     public function create()
     {
         $test = "";
-        return view("tp-3");
+        return view("tp-2");
     }
 
     /**
