@@ -14,8 +14,10 @@ return new class extends Migration
     Schema::create('employees', function (Blueprint $table) {
       $table->id();
       $table->string('nom');
-      $table->string('prenom');
       $table->string('email')->unique();
+      $table->string('phone');
+      $table->string('section');
+      $table->string('image')->nullable();
       $table->timestamps();
     });
   }
