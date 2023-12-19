@@ -33,4 +33,11 @@ class Tp3Controller extends Controller
     $users = User::all();
     return view("tp-3show", compact("users"));
   }
+
+  public function destroy(User $user) {
+    if ($user) {
+      $user->delete();
+      return redirect("/tp-3/show");
+    }
+  }
 }
