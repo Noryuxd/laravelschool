@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjetController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Tp1Controller;
 use App\Http\Controllers\Tp2Controller;
@@ -7,6 +8,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\Tp3Controller;
 use App\Http\Controllers\Tp4Controller;
 use App\Http\Controllers\TP5Controller;
+use App\Http\Controllers\TP6Controller;
 
 Route::get("/", function () {
   return "<h1> Hello World !</h1>";
@@ -37,3 +39,6 @@ Route::get("/tp-5/show", [TP5Controller::class, "show"]);
 Route::delete('/tp-5/{employee}', [TP5Controller::class, 'destroy'])->name('tp5.destroy');
 Route::get("/tp-5/update/{employee}", [TP5Controller::class, "showUpdate"]);
 Route::put('/tp-5/update/{employee}', [TP5Controller::class, "update"])->name('tp5.update');
+
+
+Route::resource("/TP6", ProjetController::class);
