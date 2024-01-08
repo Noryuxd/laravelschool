@@ -31,7 +31,6 @@
                         @endforeach
                     @endif
                 </select>
-
             </div>
             <div class="mb-6">
                 <label for="description" class="block text-gray-600 text-sm font-medium mb-2">Description</label>
@@ -48,5 +47,4 @@
         </form>
     </div>
 </body>
-
 </html>

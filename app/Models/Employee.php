@@ -21,4 +21,9 @@ class Employee extends Model
   {
     return $this->belongsToMany(Projet::class);
   }
+
+  public function taches()
+  {
+    return $this->hasMany(Tache::class, 'employees_taches');
+  }
 }

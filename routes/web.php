@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProjetController;
+use App\Http\Controllers\TacheController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Tp1Controller;
 use App\Http\Controllers\Tp2Controller;
@@ -42,3 +43,4 @@ Route::put('/tp-5/update/{employee}', [TP5Controller::class, "update"])->name('t
 
 
 Route::resource("/TP6", ProjetController::class);
+Route::resource('tache', TacheController::class);

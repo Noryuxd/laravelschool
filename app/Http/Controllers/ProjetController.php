@@ -45,6 +45,7 @@ class ProjetController extends Controller
 
   public function show(Projet $projet)
   {
+    
   }
 
   /**
