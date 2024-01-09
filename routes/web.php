@@ -10,10 +10,11 @@ use App\Http\Controllers\Tp3Controller;
 use App\Http\Controllers\Tp4Controller;
 use App\Http\Controllers\TP5Controller;
 use App\Http\Controllers\TP6Controller;
+use Illuminate\Support\Facades\Auth;
 
-Route::get("/", function () {
-  return "<h1> Hello World !</h1>";
-});
+// Route::get("/", function () {
+//   return view("home");
+// });
 
 Route::get('/tp-1', [Tp1Controller::class, "get"]);
 Route::post('/tp-1', [Tp1Controller::class, "post"]);
@@ -44,3 +45,7 @@ Route::put('/tp-5/update/{employee}', [TP5Controller::class, "update"])->name('t
 
 Route::resource("/TP6", ProjetController::class);
 Route::resource('tache', TacheController::class);
+
+
+Auth::routes();
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
