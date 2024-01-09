@@ -35,16 +35,21 @@ Route::delete('/tp-4/{employee}', [Tp4Controller::class, 'destroy'])->name('tp4.
 Route::get("/tp-4/update/{employee}", [Tp4Controller::class, "showUpdate"]);
 Route::put('/tp-4/update/{employee}', [Tp4Controller::class, "update"])->name('tp4.update');
 
-Route::get("/tp-5", [TP5Controller::class, "index"]);
-Route::post("/tp-5", [TP5Controller::class, "store"])->name("tp5.store");
-Route::get("/tp-5/show", [TP5Controller::class, "show"]);
-Route::delete('/tp-5/{employee}', [TP5Controller::class, 'destroy'])->name('tp5.destroy');
-Route::get("/tp-5/update/{employee}", [TP5Controller::class, "showUpdate"]);
-Route::put('/tp-5/update/{employee}', [TP5Controller::class, "update"])->name('tp5.update');
 
 
-Route::resource("/TP6", ProjetController::class);
-Route::resource('tache', TacheController::class);
+Route::middleware(["web", "auth"])->group(function () {
+
+  Route::get("/tp-5", [TP5Controller::class, "index"]);
+  Route::post("/tp-5", [TP5Controller::class, "store"])->name("tp5.store");
+  Route::get("/tp-5/show", [TP5Controller::class, "show"]);
+  Route::delete('/tp-5/{employee}', [TP5Controller::class, 'destroy'])->name('tp5.destroy');
+  Route::get("/tp-5/update/{employee}", [TP5Controller::class, "showUpdate"]);
+  Route::put('/tp-5/update/{employee}', [TP5Controller::class, "update"])->name('tp5.update');
+
+  Route::resource("/TP6", ProjetController::class);
+  Route::resource('tache', TacheController::class);
+});
+
 
 
 Auth::routes();
